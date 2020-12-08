@@ -26,15 +26,7 @@
                     <td>
                         @item.Price
                     </td>
-                    <td>
-                        <img src="~/Foods/@item.ImageName" width="80" height="70">
-                    </td>
-                    <td>
-                        <a asp-page="/Orders/ShoppingCart" asp-route-isbn="@item.ISBN"
-                           class="btn btn-success btn-group-lg pull-right">
-                            Add To Cart
-                        </a>
-                    </td>
+
                     <td>
                         <p>
                             <a asp-page="/Foods/UpdateFood" asp-route-id="@item.ISBN">Edit</a> |
