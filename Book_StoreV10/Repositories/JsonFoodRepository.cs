@@ -21,17 +21,17 @@ namespace CoopApp.Repositories
             Foods.Add(Food);
             JsonFileWritter.WriteToJsonFood(Foods, JsonFileName);
         }
-        public Food GetFood(string isbn)
+        public Food GetFood(double VareNummer)
         {
             foreach (var b in GetAllFoods())
             {
-                if (b.ISBN == isbn)
+                if (b.VareNummer == VareNummer)
                     return b;
             }
             return new Food();
         }
 
-        void IFoodsRepository.DeleteFood(string iSBN)
+        void IFoodsRepository.DeleteFood(double VareNummer)
         {
             throw new NotImplementedException();
         }

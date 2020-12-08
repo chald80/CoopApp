@@ -24,11 +24,11 @@ namespace CoopApp.Services
             return _cartItems;
         }
 
-       public void RemoveFood(string isbn)
+       public void RemoveFood(double VareNumer)
         {
             foreach (var food in _cartItems)
             {
-                if (food.ISBN ==isbn)
+                if (food.VareNummer == VareNumer)
                 {
                     _cartItems.Remove(food);
                     break;
@@ -42,7 +42,7 @@ namespace CoopApp.Services
 
             foreach (var v in _cartItems)
             {
-                totalPrice = totalPrice + (decimal)v.Price ;
+                totalPrice = totalPrice + (decimal)v.Pris ;
             }
             return totalPrice;
         }

@@ -19,15 +19,15 @@
             @foreach (var item in Model.OrderedFoods)
             {
                 <tr>
-                    <td class="text-center">@item.Title</td>
-                    <td class="text-left">@item.Author</td>
+                    <td class="text-center">@item.VareNummer</td>
+                    <td class="text-left">@item.Navn</td>
                     <td>
                         <img src="~/Foods/@item.ImageName" width="60" height="70">
                     </td>
-                    <td class="text-right">@item.Price.ToString("c")</td>
+                    <td class="text-right">@item.Pris.ToString("c")</td>
                     <td>
                         <form method="post">
-                            <button asp-page-handler="Delete" asp-route-isbn="@item.ISBN"
+                            <button asp-page-handler="Delete" asp-route-isbn="@item.VareNummer"
                                     class="btn btn-danger btn-group-lg pull-right">
                                 Delete-From-Chart
                             </button>

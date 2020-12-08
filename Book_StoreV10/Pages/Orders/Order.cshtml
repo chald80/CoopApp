@@ -9,10 +9,10 @@
 @foreach (var item in Model.cartItems)
 {
     <tr>
-        <td class="text-left"> Name: @item.Title</td>
+        <td class="text-left"> Name: @item.Navn</td>
         <td class="text-right">
             Total Price :
-            @((item.Price).ToString("c"))
+            @((item.Pris).ToString("c"))
         </td>
     </tr>
     <br />

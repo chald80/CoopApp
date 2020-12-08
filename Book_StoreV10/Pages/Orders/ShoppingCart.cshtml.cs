@@ -24,17 +24,17 @@ namespace CoopApp
             ChartService = chart;
             OrderedFoods = new List<Food>();
        }
-        public IActionResult OnGet(string isbn)
+        public IActionResult OnGet(double VareNummer)
         {
-            Food food = repo.GetFood(isbn);
+            Food food = repo.GetFood(VareNummer);
             ChartService.Add(food);
             OrderedFoods = ChartService.GetOrderedFoods();
             return Page();
         }
 
-         public IActionResult OnPostDelete(string isbn)
+         public IActionResult OnPostDelete(double VareNummer)
          {
-            ChartService.RemoveFood(isbn);
+            ChartService.RemoveFood(VareNummer);
             OrderedFoods = ChartService.GetOrderedFoods();
             return Page();
         }

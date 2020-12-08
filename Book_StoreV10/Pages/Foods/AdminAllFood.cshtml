@@ -17,45 +17,72 @@
     <thead>
         <tr>
             <th>
-                ISBN
+                VareNummer
             </th>
             <th>
-                Title
+                Navn
             </th>
             <th>
-                Author
+                Pris
             </th>
             <th>
-                Price
+                Producent
             </th>
             <th>
-                Image
+                SidsteSalgsDato
+            </th>
+            <th>
+                Fedt
+            </th>
+            <th>
+                Kulhydrat
+            </th>
+            <th>
+                Protein
+            </th>
+            <th>
+                ImageName
             </th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model.Foods)
         {
-<tr>
-    <td>
-        @item.ISBN
-    </td>
-    <td>
-        @item.Title
-    </td>
-    <td>
-        @item.Author
-    </td>
-    <td>
-        <img src="~/Images/@item.ImageName" width="60" height="70">
-    </td>
-    <td>
-        <p>
-            <a asp-page="UpdateFood" asp-route-id="@item.ISBN">Edit</a> |
-            <a asp-page="DeleteFood" asp-route-id="@item.ISBN">Delete</a>
-        </p>
-    </td>
-</tr>}
+        <tr>
+            <td>
+                @item.VareNummer
+            </td>
+            <td>
+                @item.Navn
+            </td>
+            <td>
+                @item.Pris
+            </td>
+            <td>
+                @item.Producent
+            </td>
+            <td>
+                @item.SidsteSalgsDato
+            </td>
+            <td>
+                @item.Fedt
+            </td>
+            <td>
+                @item.Kulhydrat
+            </td>
+            <td>
+                @item.Protein
+            </td>
+            <td>
+                <img src="~/Images/@item.ImageName" width="60" height="70">
+            </td>
+            <td>
+                <p>
+                    <a asp-page="UpdateFood" asp-route-id="@item.VareNummer">Edit</a> |
+                    <a asp-page="DeleteFood" asp-route-id="@item.VareNummer">Delete</a>
+                </p>
+            </td>
+        </tr>}
     </tbody>
 
 </table>

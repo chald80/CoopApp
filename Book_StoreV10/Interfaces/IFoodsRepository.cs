@@ -10,8 +10,8 @@ namespace CoopApp.Interfaces
     {
         List<Food> GetAllFoods();
         void AddFood(Food food);
-        Food GetFood(string isbn);
-        void DeleteFood(string iSBN);
+        Food GetFood(double VareNummer);
+        void DeleteFood(double VareNumer);
         void UpdateFood(Food food);
     }
 }
