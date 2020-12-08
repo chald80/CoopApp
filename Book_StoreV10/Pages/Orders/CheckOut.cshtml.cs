@@ -16,7 +16,7 @@ namespace CoopApp
         private ShoppingCartService cart;
         
         [BindProperty]
-        public Kunder Student { get; set; }   
+        public Kunde Student { get; set; }   
         public Order Order { get; set; }
 
         public CheckOutModel(JsonOrderRepository repo, ShoppingCartService cartService)

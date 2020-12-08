@@ -1,25 +1,46 @@
 [
-
-    {
-      "pris": 20.0,
-      "navn": "Pasta",
-      "vareNummer": 14.0,
-      "producent": "Italien",
-      "sidsteSalgsDato": 202020.0,
-      "fedt": 20.0,
-      "kulhydrat": 20.0,
-      "protein": 20.0,
-      "imageName": null
-    },
-    {
-      "pris": 99.0,
-      "navn": "Ko",
-      "vareNummer": 2.0,
-      "producent": "Polen",
-      "sidsteSalgsDato": 101010.0,
-      "fedt": 10.0,
-      "kulhydrat": 10.0,
-      "protein": 10.0,
-      "imageName": null
-    }
+  {
+    "VareNummer": 0.0,
+    "Navn": null,
+    "Pris": 0.0,
+    "Producent": null,
+    "SidsteSalgsDato": 0.0,
+    "Fedt": 0.0,
+    "Kulhydrat": 0.0,
+    "Protein": 0.0,
+    "ImageName": null
+  },
+  {
+    "VareNummer": 0.0,
+    "Navn": null,
+    "Pris": 0.0,
+    "Producent": null,
+    "SidsteSalgsDato": 0.0,
+    "Fedt": 0.0,
+    "Kulhydrat": 0.0,
+    "Protein": 0.0,
+    "ImageName": null
+  },
+  {
+    "VareNummer": 55.0,
+    "Navn": "kød",
+    "Pris": 444.0,
+    "Producent": "hhfd",
+    "SidsteSalgsDato": 1223231.0,
+    "Fedt": 0.0,
+    "Kulhydrat": 0.0,
+    "Protein": 0.0,
+    "ImageName": null
+  },
+  {
+    "VareNummer": 65.0,
+    "Navn": "kød",
+    "Pris": 70.0,
+    "Producent": "hhfd",
+    "SidsteSalgsDato": 1223231.0,
+    "Fedt": 12.0,
+    "Kulhydrat": 12.0,
+    "Protein": 12.0,
+    "ImageName": "vxvv"
+  }
 ]

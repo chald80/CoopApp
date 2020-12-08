@@ -10,8 +10,6 @@ h5 {
 }
 </style>
 
-
-
 <h6 style="color:blue"> Create a new food</h6>
 <form class="form-horizontal" method="post">
     <div asp-validation-summary="ModelOnly"></div>
@@ -50,6 +48,37 @@ h5 {
         <div class="col-sm-10">
             <input asp-for="@Model.Food.SidsteSalgsDato" type="text" class="form-control">
             <span asp-validation-for="@Model.Food.SidsteSalgsDato" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div style="width:25%" class="form-group">
+        <label asp-for="@Model.Food.Fedt" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Food.Fedt" type="text" class="form-control">
+            <span asp-validation-for="@Model.Food.Fedt" class="text-danger"></span>
+        </div>
+    </div>
+    <div style="width:25%" class="form-group">
+        <label asp-for="@Model.Food.Kulhydrat" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Food.Kulhydrat" type="text" class="form-control">
+            <span asp-validation-for="@Model.Food.Kulhydrat" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div style="width:25%" class="form-group">
+        <label asp-for="@Model.Food.Protein" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Food.Protein" type="text" class="form-control">
+            <span asp-validation-for="@Model.Food.Protein" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div style="width:25%" class="form-group">
+        <label asp-for="@Model.Food.ImageName" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Food.ImageName" type="text" class="form-control">
+            <span asp-validation-for="@Model.Food.ImageName" class="text-danger"></span>
         </div>
     </div>
 

@@ -10,7 +10,7 @@ namespace CoopApp.Models
     public class Order
     {     
         public int OrderID { get; set; }          
-        public Kunder Student { get; set; }
+        public Kunde Student { get; set; }
         public List<Food> Foods { get; set; }
         public DateTime DateTime { get; set; }
     }

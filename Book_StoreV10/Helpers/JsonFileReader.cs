@@ -33,5 +33,12 @@ namespace CoopApp
 
             return System.Text.Json.JsonSerializer.Deserialize<List<Order>>(jsonString);
         }
+
+        public static List<Kunde> ReadJsonKunde(string JsonFileName)
+        {
+            string jsonString = File.ReadAllText(JsonFileName);
+
+            return System.Text.Json.JsonSerializer.Deserialize<List<Kunde>>(jsonString);
+        }
     }
 }

@@ -1,0 +1,82 @@
+﻿@page
+
+@model CoopApp.CreateKundeModel
+@{ ViewData["Title"] = "CreateKunde"; }
+<style>
+    h5 {
+        text-align: center;
+        color: blueviolet
+    }
+</style>
+
+<h5>The number of foods is : @Model.Kunder.Count</h5>
+
+
+<h6 style="color:blue"> Create a new Kunde</h6>
+<form class="form-horizontal" method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="form-group" style="width:25%">
+        <label asp-for="@Model.Kunde.MellemsID" class="col-sm-2 control-label">Varenummer</label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Kunde.MellemsID" type="text" class="form-control">
+            <span asp-validation-for="@Model.Kunde.MellemsID" class="text-danger"></span>
+        </div>
+    </div>
+    <div style="width:25%" class="form-group">
+        <label asp-for="@Model.Kunde.Navn" class="col-sm-2 control-label">Navn</label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Kunde.Navn" type="text" class="form-control">
+            <span asp-validation-for="@Model.Kunde.Navn" class="text-danger"></span>
+        </div>
+    </div>
+    <div style="width:25%" class="form-group">
+        <label asp-for="@Model.Kunde.Adresse" class="col-sm-2 control-label">Billede</label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Kunde.Adresse" type="text" class="form-control">
+            <span asp-validation-for="@Model.Kunde.Adresse" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div style="width:25%" class="form-group">
+        <label asp-for="@Model.Kunde.PostNR class="col-sm-2 control-label">Producent</label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Kunde.PostNR" type="text" class="form-control">
+            <span asp-validation-for="@Model.Kunde.PostNR" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div style="width:25%" class="form-group">
+        <label asp-for="@Model.Kunde.Mail" class="col-sm-2 control-label">Pris</label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Kunde.Mail" type="text" class="form-control">
+            <span asp-validation-for="@Model.Kunde.Mail" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div style="width:25%" class="form-group">
+        <label asp-for="@Model.Kunde.Telefon" class="col-sm-2 control-label">SSD</label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Kunde.Telefon" type="text" class="form-control">
+            <span asp-validation-for="@Model.Kunde.Telefon" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div style="width:25%" class="form-group">
+        <label asp-for="@Model.Kunde.Password" class="col-sm-2 control-label">Fedt</label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Kunde.Password" type="text" class="form-control">
+            <span asp-validation-for="@Model.Kunde.Password" class="text-danger"></span>
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="border-light">
+                Add Food
+            </button>
+        </div>
+    </div>
+</form>
+

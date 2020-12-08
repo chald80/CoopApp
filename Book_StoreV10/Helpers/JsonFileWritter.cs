@@ -21,5 +21,13 @@ namespace CoopApp
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(orders, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(JsonFileName, output);
         }
+
+        public static void WriteToJsonKunde(List<Kunde> kunder, string JsonFileName)
+        {
+            string output = Newtonsoft.Json.JsonConvert.SerializeObject(kunder, Newtonsoft.Json.Formatting.Indented);
+            File.WriteAllText(JsonFileName, output);
+        }
+
+
     }
 }

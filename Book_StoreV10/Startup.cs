@@ -28,7 +28,9 @@ namespace CoopApp
         {
             services.AddRazorPages();
             services.AddTransient<IFoodsRepository,JsonFoodRepository>();
-            
+            services.AddTransient<IKunderRepository, JsonKundeRepository>();
+
+
             services.AddSingleton<ShoppingCartService>();
             services.AddSingleton<JsonOrderRepository>();
 

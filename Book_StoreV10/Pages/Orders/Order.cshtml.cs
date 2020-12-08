@@ -16,7 +16,7 @@ namespace CoopApp
 
         private ShoppingCartService cart;
 
-        public Kunder Student { get; set; }
+        public Kunde Student { get; set; }
         public Order Order { get; set; }   
         public List<Food> cartItems { get; set; }
 
@@ -26,7 +26,7 @@ namespace CoopApp
             cart = cartService;
         }
 
-        public IActionResult OnGet(Kunder st)
+        public IActionResult OnGet(Kunde st)
         {
             Student = st;              
             cartItems = cart.GetOrderedFoods();

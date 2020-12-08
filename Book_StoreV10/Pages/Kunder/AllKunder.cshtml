@@ -1,0 +1,62 @@
+﻿@page
+@model CoopApp.AllKunderModel
+@{
+    ViewData["Title"] = "CreateKunde";
+}
+
+<style>
+    tbody {
+        text-align: center;
+        color: blueviolet
+    }
+</style>
+
+<h1> Foods </h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Navn </th>
+            <th>Adresse</th>
+            <th>MellemsID</th>
+            <th>Post Nummer</th>
+            <th>Mail</th>
+            <th>Telefon</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Kunder.Count != 0)
+        {
+@foreach (var item in Model.Kunder)
+{
+<tr>
+    <td>
+        @item.Navn
+    </td>
+    <td>
+        @item.Adresse
+    </td>
+    <td>
+        @item.MellemsID
+    </td>
+    <td>
+        @item.PostNR
+    </td>
+    <td>
+        @item.Mail
+    </td>
+    <td>
+        @item.Telefon
+    </td>
+    <td>
+        @item.Password
+    </td>
+    <td>
+        <a asp-page="/Orders/ShoppingCart" asp-route-isbn="@item.MellemsID"
+           class="btn btn-success btn-group-lg pull-right">
+            Add To Cart
+        </a>
+    </td>
+</tr>}}
+    </tbody>
+</table>
