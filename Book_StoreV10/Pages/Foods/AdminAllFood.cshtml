@@ -4,38 +4,59 @@
     ViewData["Title"] = "AdnimMenu";
 }
 
-<h1> AllFoods </h1>
+<h1>GetAllFoods</h1>
+
+<p>
+    <a asp-page="CreateFood">Create New Food</a>
+</p>
+
+
+
+
 <table class="table">
     <thead>
         <tr>
-            <th>Title </th>
-            <th>Author</th>
-            <th>Price</th>
-            <th>Image</th>
+            <th>
+                ISBN
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Author
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Image
+            </th>
         </tr>
     </thead>
     <tbody>
-        @if (Model.Foods.Count != 0)
+        @foreach (var item in Model.Foods)
         {
-            @foreach (var item in Model.Foods)
-            {
-                <tr>
-                    <td>
-                        @item.Title
-                    </td>
-                    <td>
-                        @item.Price
-                    </td>
-
-                    <td>
-                        <p>
-                            <a asp-page="/Foods/UpdateFood" asp-route-id="@item.ISBN">Edit</a> |
-                            <a asp-page="/Food/DeleteFood" asp-route-id="@item.ISBN">Delete</a>
-                        </p>
-                    </td>
-                </tr>
-            }
-        }
+<tr>
+    <td>
+        @item.ISBN
+    </td>
+    <td>
+        @item.Title
+    </td>
+    <td>
+        @item.Author
+    </td>
+    <td>
+        <img src="~/Images/@item.ImageName" width="60" height="70">
+    </td>
+    <td>
+        <p>
+            <a asp-page="UpdateFood" asp-route-id="@item.ISBN">Edit</a> |
+            <a asp-page="DeleteFood" asp-route-id="@item.ISBN">Delete</a>
+        </p>
+    </td>
+</tr>}
     </tbody>
+
 </table>
 
