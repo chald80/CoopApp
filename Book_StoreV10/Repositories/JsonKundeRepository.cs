@@ -9,7 +9,7 @@ namespace CoopApp.Repositories
 {
     public class JsonKundeRepository : IKunderRepository
     {
-        string JsonFileName = @"C:\Users\jacob\Desktop\CoopApp-master\Book_StoreV10\Data\JsonKunde.json";
+        string JsonFileName = @"C:\Users\hald_\Source\Repos\chald80\CoopApp\Book_StoreV10\Data\JsonKunde.json";
 
         public List<Kunde> GetAllKunder()
         {
