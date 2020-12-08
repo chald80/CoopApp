@@ -1,4 +1,5 @@
 ﻿using CoopApp.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,14 +15,23 @@ namespace CoopApp
         {
             string jsonString = File.ReadAllText(JsonFileName);
 
-            return JsonSerializer.Deserialize<List<Food>>(jsonString);
+            return System.Text.Json.JsonSerializer.Deserialize<List<Food>>(jsonString);
         }
+     
+       /* public static Dictionary<int, Food> ReadJson(string JsonFileName)
+        {
+            string jsonString = File.ReadAllText(JsonFileName);
+
+            return JsonConvert.DeserializeObject<Dictionary<int, Food>>(jsonString);
+        }
+       */
+
 
         public static List<Order> ReadJsonOrder(string JsonFileName)
         {
             string jsonString = File.ReadAllText(JsonFileName);
 
-            return JsonSerializer.Deserialize<List<Order>>(jsonString);
+            return System.Text.Json.JsonSerializer.Deserialize<List<Order>>(jsonString);
         }
     }
 }
