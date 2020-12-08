@@ -1,5 +1,35 @@
 [
-  {
-
-  }
+    {
+      "pris": 0.0,
+      "navn": null,
+      "vareNummer": 0.0,
+      "producent": null,
+      "sidsteSalgsDato": 0.0,
+      "fedt": 0.0,
+      "kulhydrat": 0.0,
+      "protein": 0.0,
+      "imageName": null
+    },
+    {
+      "pris": 20.0,
+      "navn": "Pasta",
+      "vareNummer": 14.0,
+      "producent": "Italien",
+      "sidsteSalgsDato": 202020.0,
+      "fedt": 20.0,
+      "kulhydrat": 20.0,
+      "protein": 20.0,
+      "imageName": null
+    },
+    {
+      "pris": 99.0,
+      "navn": "Ko",
+      "vareNummer": 2.0,
+      "producent": "Polen",
+      "sidsteSalgsDato": 101010.0,
+      "fedt": 10.0,
+      "kulhydrat": 10.0,
+      "protein": 10.0,
+      "imageName": null
+    }
 ]
