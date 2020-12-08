@@ -30,5 +30,40 @@ namespace CoopApp.Repositories
             }
             return new Food();
         }
+
+        void IFoodsRepository.DeleteFood(string iSBN)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IFoodsRepository.UpdateFood(Food food)
+        {
+            throw new NotImplementedException();
+        }
+        /*
+        public void UpdatePizza(Pizza pizza)
+        {
+            Dictionary<int, Pizza> pizzas = AllPizzas();
+            Pizza foundPizza = pizzas[pizza.Id];
+            foundPizza.Id = pizza.Id;
+            foundPizza.Name = pizza.Name;
+            foundPizza.Description = pizza.Description;
+            foundPizza.Price = pizza.Price;
+            foundPizza.ImageName = pizza.ImageName;
+            JsonFileWritter.WriteToJson(pizzas, JsonFileName);
+        }
+
+        public void DeletePizza(int id)
+        {
+            Dictionary<int, Pizza> pizzas = AllPizzas();
+            pizzas.Remove(id);
+            JsonFileWritter.WriteToJson(pizzas, JsonFileName);
+        }
+        */
+
+
+
+
+
     }
 }

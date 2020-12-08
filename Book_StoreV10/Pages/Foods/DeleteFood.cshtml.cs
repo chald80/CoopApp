@@ -28,7 +28,7 @@ namespace CoopApp
         public IActionResult OnPost(String ISBN)
         {
             catalog.DeleteFood(ISBN);
-            return RedirectToPage("GetAllFoods");
+            return RedirectToPage("GetAllFood");
         }
     }
 }

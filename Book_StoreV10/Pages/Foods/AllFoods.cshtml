@@ -31,10 +31,16 @@
             </td>
             <td>
                 <a asp-page="/Orders/ShoppingCart" asp-route-isbn="@item.ISBN"
-                       class="btn btn-success btn-group-lg pull-right"  >
-                        Add To Cart
+                   class="btn btn-success btn-group-lg pull-right">
+                    Add To Cart
                 </a>
-            </td>          
+            </td>
+            <td>
+                <p>
+                    <a asp-page="/Foods/UpdateFood" asp-route-id="@item.ISBN">Edit</a> |
+                    <a asp-page="/Food/DeleteFood" asp-route-id="@item.ISBN">Delete</a>
+                </p>
+            </td>
         </tr>
         }
         }
