@@ -18,9 +18,9 @@ namespace CoopApp
         {
             catalog = repository;
         }
-        public void OnGet(int id)
+        public void OnGet(String ISBN)
         {
-            Food = catalog.GetFood(id);
+            Food = catalog.GetFood(ISBN);
         }
 
         public IActionResult OnPost()

@@ -11,7 +11,7 @@ namespace CoopApp.Interfaces
         List<Food> GetAllFoods();
         void AddFood(Food food);
         Food GetFood(string isbn);
-        void DeleteFood();
-        void UpdateFood();
+        void DeleteFood(string iSBN);
+        void UpdateFood(Food food);
     }
 }

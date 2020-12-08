@@ -1,4 +1,4 @@
-﻿@page "{id}"
+﻿@page "{ISBN}"
 @model CoopApp.UpdateFoodModel
 
 @{ ViewData["Title"] = "UpdateFood"; }
@@ -7,29 +7,29 @@
 
 <form method="post">
     <div class="form-group">
-        <label asp-for="@Model.Pizza.Id" class="control-label"></label>
-        <input hidden="hidden" asp-for="@Model.Pizza.Id" class="form-control" />
-        <span asp-validation-for="@Model.Pizza.Id" class="text-danger"></span>
+        <label asp-for="@Model.Food.ISBN" class="control-label"></label>
+        <input hidden="hidden" asp-for="@Model.Food.ISBN" class="form-control" />
+        <span asp-validation-for="@Model.Food.ISBN" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Pizza.Name" class="control-label"></label>
-        <input asp-for="@Model.Pizza.Name" class="form-control" />
-        <span asp-validation-for="@Model.Pizza.Name" class="text-danger"></span>
+        <label asp-for="@Model.Food.Title" class="control-label"></label>
+        <input asp-for="@Model.Food.Title" class="form-control" />
+        <span asp-validation-for="@Model.Food.Title" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Pizza.Description" class="control-label"></label>
-        <input asp-for="@Model.Pizza.Description" class="form-control" />
-        <span asp-validation-for="@Model.Pizza.Description" class="text-danger"></span>
+        <label asp-for="@Model.Food.Price" class="control-label"></label>
+        <input asp-for="@Model.Food.Price" class="form-control" />
+        <span asp-validation-for="@Model.Food.Price" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Pizza.Price" class="control-label"></label>
-        <input asp-for="@Model.Pizza.Price" class="form-control" />
-        <span asp-validation-for="@Model.Pizza.Price" class="text-danger"></span>
+        <label asp-for="@Model.Food.Author" class="control-label"></label>
+        <input asp-for="@Model.Food.Author" class="form-control" />
+        <span asp-validation-for="@Model.Food.Author" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Pizza.ImageName" class="control-label"></label>
-        <input asp-for="@Model.Pizza.ImageName" class="form-control" />
-        <span asp-validation-for="@Model.Pizza.ImageName" class="text-danger"></span>
+        <label asp-for="@Model.Food.ImageName" class="control-label"></label>
+        <input asp-for="@Model.Food.ImageName" class="form-control" />
+        <span asp-validation-for="@Model.Food.ImageName" class="text-danger"></span>
     </div>
     <div class="form-group">
         <input type="submit" value="Save" class="btn btn-primary" />
