@@ -18,7 +18,7 @@ namespace CoopApp
         {
             catalog = repository;
         }
-        public List<Food> Foods { get; private set; }
+        public List<Food> Foods { get; set; }
 
         [BindProperty]
         public Food Food { get; set; }

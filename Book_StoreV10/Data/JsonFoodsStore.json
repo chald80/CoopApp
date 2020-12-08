@@ -1,15 +1,5 @@
 [
-    {
-      "pris": 0.0,
-      "navn": null,
-      "vareNummer": 0.0,
-      "producent": null,
-      "sidsteSalgsDato": 0.0,
-      "fedt": 0.0,
-      "kulhydrat": 0.0,
-      "protein": 0.0,
-      "imageName": null
-    },
+
     {
       "pris": 20.0,
       "navn": "Pasta",
