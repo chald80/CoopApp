@@ -19,13 +19,13 @@ namespace CoopApp
         {
             catalog = repository;
         }
-        public IActionResult OnGet(double VareNummer)
+        public IActionResult OnGet(int VareNummer)
         {
             Food = catalog.GetFood(VareNummer);
             return Page();
         }
 
-        public IActionResult OnPost(double VareNummer)
+        public IActionResult OnPost(int VareNummer)
         {
             catalog.DeleteFood(VareNummer);
             return RedirectToPage("GetAllFood");

@@ -8,10 +8,15 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Title </th>
-            <th>Author</th>
-            <th>Price</th>
-            <th>Image</th>
+            <th>VareNummer</th>
+            <th>Navn</th>
+            <th>Pris</th>
+            <th>Producent</th>
+            <th>SidsteSalgsDato</th>
+            <th>Fedt</th>
+            <th>Kulhydrat</th>
+            <th>Protein</th>
+            <th>ImageName</th>
         </tr>
     </thead>
     <tbody>
@@ -21,24 +26,42 @@
         {
         <tr>
             <td>
-                @item.VareNummer
+                @item.Value.VareNummer
             </td>
             <td>
-                @item.Navn
+                @item.Value.Navn
             </td>
             <td>
-                <img src="~/Foods/@item.ImageName" width="80" height="70">
+                @item.Value.Pris
             </td>
             <td>
-                <a asp-page="/Orders/ShoppingCart" asp-route-isbn="@item.VareNummer"
+                @item.Value.Producent
+            </td>
+            <td>
+                @item.Value.SidsteSalgsDato
+            </td>
+            <td>
+                @item.Value.Fedt
+            </td>
+            <td>
+                @item.Value.Kulhydrat
+            </td>
+            <td>
+                @item.Value.Protein
+            </td>
+            <td>
+                <img src="~/Foods/@item.Value.ImageName" width="80" height="70">
+            </td>
+            <td>
+                <a asp-page="/Orders/ShoppingCart" asp-route-isbn="@item.Value.VareNummer"
                    class="btn btn-success btn-group-lg pull-right">
                     Add To Cart
                 </a>
             </td>
             <td>
                 <p>
-                    <a asp-page="/Foods/UpdateFood" asp-route-id="@item.VareNummer">Edit</a> |
-                    <a asp-page="/Food/DeleteFood" asp-route-id="@item.VareNummer">Delete</a>
+                    <a asp-page="/Foods/UpdateFood" asp-route-id="@item.Key">Edit</a> |
+                    <a asp-page="/Food/DeleteFood" asp-route-id="@item.Key">Delete</a>
                 </p>
             </td>
         </tr>

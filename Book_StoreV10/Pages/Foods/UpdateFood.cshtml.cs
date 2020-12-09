@@ -18,7 +18,7 @@ namespace CoopApp
         {
             catalog = repository;
         }
-        public void OnGet(double VareNummer)
+        public void OnGet(int VareNummer)
         {
             Food = catalog.GetFood(VareNummer);
         }

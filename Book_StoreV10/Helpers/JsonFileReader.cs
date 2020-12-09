@@ -11,11 +11,11 @@ namespace CoopApp
 {
     public class JsonFileReader
     {
-        public static List<Food> ReadJsonFood(string JsonFileName)
+        public static Dictionary<int, Food> ReadJsonFood(string JsonFileName)
         {
             string jsonString = File.ReadAllText(JsonFileName);
 
-            return System.Text.Json.JsonSerializer.Deserialize<List<Food>>(jsonString);
+            return JsonConvert.DeserializeObject<Dictionary<int, Food>>(jsonString);
         }
      
        /* public static Dictionary<int, Food> ReadJson(string JsonFileName)

@@ -1,69 +1,65 @@
-﻿using CoopApp.Interfaces;
-using CoopApp.Models;
+﻿using CoopApp.Models;
+using CoopApp.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CoopApp.Repositories
+namespace CoopApp.Services
 {
-    public class JsonFoodRepository:IFoodsRepository
+    public class JsonFoodRepository : IFoodsRepository
     {
         string JsonFileName = @"C:\Users\hald_\Source\Repos\chald80\CoopApp\Book_StoreV10\Data\JsonFoodsStore.json";
 
-        public List<Food> GetAllFoods()
+        public void AddFood(Food food)
+        {
+            Dictionary<int, Food> foods = GetAllFoods();
+            foods.Add(food.VareNummer, food);
+            JsonFileWritter.WriteToJsonFood(foods, JsonFileName);
+        }
+
+        public Dictionary<int, Food> GetAllFoods()
         {
             return JsonFileReader.ReadJsonFood(JsonFileName);
         }
-        public void AddFood(Food Food)
+        public Dictionary<int, Food> FilterFood(string criteria)
         {
-            List<Food> Foods = GetAllFoods().ToList();
-            Foods.Add(Food);
-            JsonFileWritter.WriteToJsonFood(Foods, JsonFileName);
-        }
-        public Food GetFood(double VareNummer)
-        {
-            foreach (var b in GetAllFoods())
+            Dictionary<int, Food> foods = GetAllFoods();
+            Dictionary<int, Food> filteredFoods = new Dictionary<int, Food>();
+            foreach (var p in foods.Values)
             {
-                if (b.VareNummer == VareNummer)
-                    return b;
+                if (p.Navn.StartsWith(criteria))
+                {
+                    filteredFoods.Add(p.VareNummer, p);
+                }
             }
-            return new Food();
+            return filteredFoods;
         }
 
-        void IFoodsRepository.DeleteFood(double VareNummer)
+        public Food GetFood(int VareNummer)
         {
-            throw new NotImplementedException();
+            Dictionary<int, Food> foods = GetAllFoods();
+            Food foundFood = foods[VareNummer];
+            return foundFood;
         }
 
-        void IFoodsRepository.UpdateFood(Food food)
+        public void UpdateFood(Food food)
         {
-            throw new NotImplementedException();
+            Dictionary<int, Food> foods = GetAllFoods();
+            Food foundFood = foods[food.VareNummer];
+            foundFood.VareNummer = food.VareNummer;
+            foundFood.Navn = food.Navn;
+            foundFood.Pris = food.Pris;
+            foundFood.Producent = food.Producent;
+            foundFood.ImageName = food.ImageName;
+            JsonFileWritter.WriteToJsonFood(foods, JsonFileName);
         }
-        /*
-        public void UpdatePizza(Pizza pizza)
+
+        public void DeleteFood(int Varenummer)
         {
-            Dictionary<int, Pizza> pizzas = AllPizzas();
-            Pizza foundPizza = pizzas[pizza.Id];
-            foundPizza.Id = pizza.Id;
-            foundPizza.Name = pizza.Name;
-            foundPizza.Description = pizza.Description;
-            foundPizza.Price = pizza.Price;
-            foundPizza.ImageName = pizza.ImageName;
-            JsonFileWritter.WriteToJson(pizzas, JsonFileName);
+            Dictionary<int, Food> foods = GetAllFoods();
+            foods.Remove(Varenummer);
+            JsonFileWritter.WriteToJsonFood(foods, JsonFileName);
         }
-
-        public void DeletePizza(int id)
-        {
-            Dictionary<int, Pizza> pizzas = AllPizzas();
-            pizzas.Remove(id);
-            JsonFileWritter.WriteToJson(pizzas, JsonFileName);
-        }
-        */
-
-
-
-
-
     }
 }

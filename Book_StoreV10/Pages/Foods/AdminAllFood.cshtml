@@ -50,36 +50,36 @@
         {
         <tr>
             <td>
-                @item.VareNummer
+                @item.Value.VareNummer
             </td>
             <td>
-                @item.Navn
+                @item.Value.Navn
             </td>
             <td>
-                @item.Pris
+                @item.Value.Pris
             </td>
             <td>
-                @item.Producent
+                @item.Value.Producent
             </td>
             <td>
-                @item.SidsteSalgsDato
+                @item.Value.SidsteSalgsDato
             </td>
             <td>
-                @item.Fedt
+                @item.Value.Fedt
             </td>
             <td>
-                @item.Kulhydrat
+                @item.Value.Kulhydrat
             </td>
             <td>
-                @item.Protein
+                @item.Value.Protein
             </td>
             <td>
-                <img src="~/Images/@item.ImageName" width="60" height="70">
+                <img src="~/Images/@item.Value.ImageName" width="60" height="70">
             </td>
             <td>
                 <p>
-                    <a asp-page="UpdateFood" asp-route-id="@item.VareNummer">Edit</a> |
-                    <a asp-page="DeleteFood" asp-route-id="@item.VareNummer">Delete</a>
+                    <a asp-page="UpdateFood" asp-route-id="@item.Key">Edit</a> |
+                    <a asp-page="DeleteFood" asp-route-id="@item.Key">Delete</a>
                 </p>
             </td>
         </tr>}

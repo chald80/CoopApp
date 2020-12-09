@@ -10,7 +10,7 @@ namespace CoopApp
 {
     public class JsonFileWritter
     {
-        public static void WriteToJsonFood(List<Food> foods, string JsonFileName)
+        public static void WriteToJsonFood(Dictionary<int, Food> foods, string JsonFileName)
         {
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(foods, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(JsonFileName, output);

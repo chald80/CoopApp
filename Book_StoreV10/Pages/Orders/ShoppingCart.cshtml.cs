@@ -24,7 +24,7 @@ namespace CoopApp
             ChartService = chart;
             OrderedFoods = new List<Food>();
        }
-        public IActionResult OnGet(double VareNummer)
+        public IActionResult OnGet(int VareNummer)
         {
             Food food = repo.GetFood(VareNummer);
             ChartService.Add(food);
@@ -32,7 +32,7 @@ namespace CoopApp
             return Page();
         }
 
-         public IActionResult OnPostDelete(double VareNummer)
+         public IActionResult OnPostDelete(int VareNummer)
          {
             ChartService.RemoveFood(VareNummer);
             OrderedFoods = ChartService.GetOrderedFoods();

@@ -15,7 +15,7 @@ namespace CoopApp
         private IFoodsRepository repository;
         [BindProperty]
         public Food Food { get; set; }
-        public List<Food> Foods { get; set; }
+        public Dictionary<int, Food> Foods { get; set; }
         public CreateFoodModel(IFoodsRepository repo)
         {
             repository = repo;
