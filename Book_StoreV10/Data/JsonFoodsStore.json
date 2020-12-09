@@ -31,5 +31,16 @@
     "Kulhydrat": 12.0,
     "Protein": 12.0,
     "ImageName": "vxvv"
+  },
+  "55": {
+    "VareNummer": 55,
+    "Navn": "kød",
+    "Pris": 444.0,
+    "Producent": "hhfd",
+    "SidsteSalgsDato": 1223231.0,
+    "Fedt": 12.0,
+    "Kulhydrat": 12.0,
+    "Protein": 12.0,
+    "ImageName": "vxvv"
   }
 }

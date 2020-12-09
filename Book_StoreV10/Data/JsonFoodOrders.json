@@ -2,16 +2,27 @@
   {
     "OrderID": 1,
     "Student": {
+      "MellemsID": 0,
+      "Navn": null,
+      "Adresse": null,
+      "PostNR": null,
+      "Mail": null,
+      "Telefon": null,
+      "Password": null,
+      "Section": 1,
       "Id": 1,
-      "Name": "mohammed",
-      "Section": 1
+      "Name": "mohammed"
     },
     "Foods": [
       {
-        "Price": 200.0,
-        "Title": "Programming",
-        "ISBN": "111",
-        "Author": "mohammed",
+        "VareNummer": 0,
+        "Navn": null,
+        "Pris": 0.0,
+        "Producent": null,
+        "SidsteSalgsDato": 0.0,
+        "Fedt": 0.0,
+        "Kulhydrat": 0.0,
+        "Protein": 0.0,
         "ImageName": "Coders.jfif"
       }
     ],
@@ -20,23 +31,38 @@
   {
     "OrderID": 2,
     "Student": {
+      "MellemsID": 0,
+      "Navn": null,
+      "Adresse": null,
+      "PostNR": null,
+      "Mail": null,
+      "Telefon": null,
+      "Password": null,
+      "Section": 0,
       "Id": 4,
-      "Name": "ib",
-      "Section": 0
+      "Name": "ib"
     },
     "Foods": [
       {
-        "Price": 200.0,
-        "Title": "Programming",
-        "ISBN": "111",
-        "Author": "allan",
+        "VareNummer": 0,
+        "Navn": null,
+        "Pris": 0.0,
+        "Producent": null,
+        "SidsteSalgsDato": 0.0,
+        "Fedt": 0.0,
+        "Kulhydrat": 0.0,
+        "Protein": 0.0,
         "ImageName": "Coders.jfif"
       },
       {
-        "Price": 200.0,
-        "Title": "Programming",
-        "ISBN": "111",
-        "Author": "allan",
+        "VareNummer": 0,
+        "Navn": null,
+        "Pris": 0.0,
+        "Producent": null,
+        "SidsteSalgsDato": 0.0,
+        "Fedt": 0.0,
+        "Kulhydrat": 0.0,
+        "Protein": 0.0,
         "ImageName": "Coders.jfif"
       }
     ],
@@ -45,26 +71,139 @@
   {
     "OrderID": 3,
     "Student": {
+      "MellemsID": 0,
+      "Navn": null,
+      "Adresse": null,
+      "PostNR": null,
+      "Mail": null,
+      "Telefon": null,
+      "Password": null,
+      "Section": 0,
       "Id": 3,
-      "Name": "ib",
-      "Section": 0
+      "Name": "ib"
     },
     "Foods": [
       {
-        "Price": 200.0,
-        "Title": "Programming",
-        "ISBN": "111",
-        "Author": "allan",
+        "VareNummer": 0,
+        "Navn": null,
+        "Pris": 0.0,
+        "Producent": null,
+        "SidsteSalgsDato": 0.0,
+        "Fedt": 0.0,
+        "Kulhydrat": 0.0,
+        "Protein": 0.0,
         "ImageName": "Coders.jfif"
       },
       {
-        "Price": 200.0,
-        "Title": "Programming",
-        "ISBN": "111",
-        "Author": "allan",
+        "VareNummer": 0,
+        "Navn": null,
+        "Pris": 0.0,
+        "Producent": null,
+        "SidsteSalgsDato": 0.0,
+        "Fedt": 0.0,
+        "Kulhydrat": 0.0,
+        "Protein": 0.0,
         "ImageName": "Coders.jfif"
       }
     ],
     "DateTime": "2020-12-07T22:38:52.3468223+01:00"
+  },
+  {
+    "OrderID": 4,
+    "Student": {
+      "MellemsID": 0,
+      "Navn": null,
+      "Adresse": null,
+      "PostNR": null,
+      "Mail": null,
+      "Telefon": null,
+      "Password": null,
+      "Section": 0,
+      "Id": 323,
+      "Name": "xvxv"
+    },
+    "Foods": [
+      {
+        "VareNummer": 55,
+        "Navn": "kød",
+        "Pris": 444.0,
+        "Producent": "hhfd",
+        "SidsteSalgsDato": 1223231.0,
+        "Fedt": 12.0,
+        "Kulhydrat": 12.0,
+        "Protein": 12.0,
+        "ImageName": "vxvv"
+      },
+      {
+        "VareNummer": 55,
+        "Navn": "kød",
+        "Pris": 444.0,
+        "Producent": "hhfd",
+        "SidsteSalgsDato": 1223231.0,
+        "Fedt": 12.0,
+        "Kulhydrat": 12.0,
+        "Protein": 12.0,
+        "ImageName": "vxvv"
+      }
+    ],
+    "DateTime": "2020-12-09T13:01:59.5428462+01:00"
+  },
+  {
+    "OrderID": 5,
+    "Student": {
+      "MellemsID": 0,
+      "Navn": null,
+      "Adresse": null,
+      "PostNR": null,
+      "Mail": null,
+      "Telefon": null,
+      "Password": null,
+      "Section": 0,
+      "Id": 423424,
+      "Name": "42424"
+    },
+    "Foods": [
+      {
+        "VareNummer": 55,
+        "Navn": "kød",
+        "Pris": 444.0,
+        "Producent": "hhfd",
+        "SidsteSalgsDato": 1223231.0,
+        "Fedt": 12.0,
+        "Kulhydrat": 12.0,
+        "Protein": 12.0,
+        "ImageName": "vxvv"
+      }
+    ],
+    "DateTime": "2020-12-09T13:03:08.2110184+01:00"
+  },
+  {
+    "OrderID": 6,
+    "Student": {
+      "MellemsID": 0,
+      "Navn": null,
+      "Adresse": null,
+      "PostNR": null,
+      "Mail": null,
+      "Telefon": null,
+      "Password": null,
+      "Section": 0,
+      "Id": 1231,
+      "Name": "xvxv"
+    },
+    "Foods": [
+      {
+        "VareNummer": 55,
+        "Navn": "kød",
+        "Pris": 444.0,
+        "Producent": "hhfd",
+        "SidsteSalgsDato": 1223231.0,
+        "Fedt": 12.0,
+        "Kulhydrat": 12.0,
+        "Protein": 12.0,
+        "ImageName": "vxvv"
+      }
+    ],
+    "DateTime": "2020-12-09T13:04:38.6207603+01:00"
   }
 ]
